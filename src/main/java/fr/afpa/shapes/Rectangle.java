@@ -2,8 +2,11 @@ package fr.afpa.shapes;
 
 // TODO implémenter la classe Rectangle
 // se référer au diagramme UML contenu dans le sous-dossier "doc" pour retrouver les informations concernant ses attributs
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Rectangle implements Shape {
+    private static final Logger logger = LogManager.getLogger(Rectangle.class);
 
     private double length;
     private double width;

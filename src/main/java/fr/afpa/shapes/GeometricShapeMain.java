@@ -33,11 +33,14 @@ package fr.afpa.shapes;
 	 -> plus d'informations par ici https://codegym.cc/fr/groups/posts/fr.575.math-pi-en-java
 
 */
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 
-class GeometricShapeMain
-{
+
+
+class GeometricShapeMain {
+	private static final Logger logger = LogManager.getLogger(GeometricShapeMain.class);
 	public static void main(String[] args) 
 	{
 		// TODO instancier plusieurs objets des classes Rectangle et Circle (2 instances de chaque)
@@ -46,24 +49,27 @@ class GeometricShapeMain
 		// plus d'information sur la classe "ArrayList" -> https://info.clg.qc.ca/java/structures/array-list
 
 		// TODO boucler sur les éléments de la liste afin d'afficher le périmètre et l'aire de chaque objet
-		Rectangle rectangle1 = new Rectangle(5, 3);
-        Rectangle rectangle2 = new Rectangle(7, 4);
-        Circle circle1 = new Circle(3);
-        Circle circle2 = new Circle(5);
+		
 
-       
-        ArrayList<Shape> shapes = new ArrayList<>();
-        shapes.add(rectangle1);
-        shapes.add(rectangle2);
-        shapes.add(circle1);
-        shapes.add(circle2);
-
-      
-        for (Shape shape : shapes) {
-            System.out.println(shape);
-            System.out.println("Perimeter: " + shape.calculatePerimeter());
-            System.out.println("Area: " + shape.calculateArea());
-            System.out.println();
-        }
-    }
-}
+		
+			// Instancier plusieurs objets des classes Rectangle et Circle (2 instances de chaque)
+			Rectangle rectangle1 = new Rectangle(5, 3);
+			Rectangle rectangle2 = new Rectangle(7, 4);
+			Circle circle1 = new Circle(3);
+			Circle circle2 = new Circle(5);
+	
+			// Ajouter ces objets à une instance de la classe ArrayList
+			ArrayList<Shape> shapes = new ArrayList<>();
+			shapes.add(rectangle1);
+			shapes.add(rectangle2);
+			shapes.add(circle1);
+			shapes.add(circle2);
+	
+			// Boucler sur les éléments de la liste afin d'afficher le périmètre et l'aire de chaque objet
+			for (Shape shape : shapes) {
+				logger.info(shape);
+				logger.info("Perimeter: " + shape.calculatePerimeter());
+				logger.info("Area: " + shape.calculateArea());
+			}
+		}
+	}
