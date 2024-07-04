@@ -10,8 +10,10 @@ public class Rectangle implements Shape {
 
     private double length;
     private double width;
-
-    public Rectangle(double length, double width) {
+    public Rectangle(double length, double width) throws InvalidInputException {
+        if (length <= 0 || width <= 0) {
+            throw new InvalidInputException("Les dimensions du rectangle doivent être positives.");
+        }
         this.length = length;
         this.width = width;
     }

@@ -41,8 +41,8 @@ import java.util.ArrayList;
 
 class GeometricShapeMain {
 	private static final Logger logger = LogManager.getLogger(GeometricShapeMain.class);
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
+		try {
 		// TODO instancier plusieurs objets des classes Rectangle et Circle (2 instances de chaque)
 
 		// TODO ajouter ces objets à une instance de la classe "ArrayList"
@@ -65,11 +65,16 @@ class GeometricShapeMain {
 			shapes.add(circle1);
 			shapes.add(circle2);
 	
-			// Boucler sur les éléments de la liste afin d'afficher le périmètre et l'aire de chaque objet
-			for (Shape shape : shapes) {
-				logger.info(shape);
-				logger.info("Perimeter: " + shape.calculatePerimeter());
-				logger.info("Area: " + shape.calculateArea());
-			}
+		  // TODO boucler sur les éléments de la liste afin d'afficher le périmètre et l'aire de chaque objet
+		  for (Shape shape : shapes) {
+			logger.info("Shape: {}", shape);
+			logger.info("Perimeter: {}", shape.calculatePerimeter());
+			logger.info("Area: {}", shape.calculateArea());
 		}
+	} catch (InvalidInputException e) {
+		logger.error("Erreur de saisie : {}", e.getMessage());
+	} catch (Exception e) {
+		logger.error("Une erreur inattendue est survenue", e);
 	}
+}
+}

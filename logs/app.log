@@ -1,0 +1,12 @@
+2024-07-04 20:08:11 INFO  GeometricShapeMain:70 - Shape: Rectangle [length=5.0 , width=3.0]
+2024-07-04 20:08:11 INFO  GeometricShapeMain:71 - Perimeter: 16.0
+2024-07-04 20:08:11 INFO  GeometricShapeMain:72 - Area: 15.0
+2024-07-04 20:08:11 INFO  GeometricShapeMain:70 - Shape: Rectangle [length=7.0 , width=4.0]
+2024-07-04 20:08:11 INFO  GeometricShapeMain:71 - Perimeter: 22.0
+2024-07-04 20:08:11 INFO  GeometricShapeMain:72 - Area: 28.0
+2024-07-04 20:08:11 INFO  GeometricShapeMain:70 - Shape: Circle [radius=3.0]
+2024-07-04 20:08:11 INFO  GeometricShapeMain:71 - Perimeter: 18.84955592153876
+2024-07-04 20:08:11 INFO  GeometricShapeMain:72 - Area: 28.274333882308138
+2024-07-04 20:08:11 INFO  GeometricShapeMain:70 - Shape: Circle [radius=5.0]
+2024-07-04 20:08:11 INFO  GeometricShapeMain:71 - Perimeter: 31.41592653589793
+2024-07-04 20:08:11 INFO  GeometricShapeMain:72 - Area: 78.53981633974483

@@ -12,7 +12,10 @@ public class Circle implements Shape {
 
 
 
-public Circle(double radius) {
+    public Circle(double radius) throws InvalidInputException {
+        if (radius <= 0) {
+            throw new InvalidInputException("Le rayon du cercle doit être positif.");
+        }
     this.radius = radius;
 }
 @Override
